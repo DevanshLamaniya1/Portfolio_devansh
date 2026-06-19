@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devansh Lamaniya | Python Developer, Software Engineer & Data Analyst</title>
+    <meta name="description" content="Portfolio of Devansh Lamaniya, Python Developer, Software Engineer & Data Analyst based in Indore, Madhya Pradesh, India. Specializing in Python, Django, machine learning, data analysis, and computer vision." />
+    
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-ivory text-charcoal antialiased">
+    <!-- Navigation Bar -->
+    <nav id="nav-bar" class="fixed top-0 left-0 right-0 z-1000 h-16 flex items-center justify-between px-6 lg:px-nav transition-all duration-500 opacity-0 -translate-y-2">
+        <a href="#hero" class="font-mono text-xs uppercase tracking-logo text-charcoal no-underline">
+            DEVANSH LAMANIYA
+        </a>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#about" class="nav-link group relative font-mono text-xs uppercase tracking-link text-charcoal no-underline">
+                About
+                <span class="nav-link-line"></span>
+            </a>
+            <a href="#skills" class="nav-link group relative font-mono text-xs uppercase tracking-link text-charcoal no-underline">
+                Skills
+                <span class="nav-link-line"></span>
+            </a>
+            <a href="#experience" class="nav-link group relative font-mono text-xs uppercase tracking-link text-charcoal no-underline">
+                Experience
+                <span class="nav-link-line"></span>
+            </a>
+            <a href="#projects" class="nav-link group relative font-mono text-xs uppercase tracking-link text-charcoal no-underline">
+                Projects
+                <span class="nav-link-line"></span>
+            </a>
+            <a href="#education" class="nav-link group relative font-mono text-xs uppercase tracking-link text-charcoal no-underline">
+                Education
+                <span class="nav-link-line"></span>
+            </a>
+            <a href="#contact" class="nav-link group relative font-mono text-xs uppercase tracking-link text-charcoal no-underline">
+                Contact
+                <span class="nav-link-line"></span>
+            </a>
+        </div>
+        <!-- Mobile Hamburger Button -->
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer" aria-label="Toggle menu">
+            <span class="hamburger-line line1"></span>
+            <span class="hamburger-line line2"></span>
+            <span class="hamburger-line line3"></span>
+        </button>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-16 left-0 right-0 bg-mobile-menu backdrop-blur-menu border-t border-bronze-light py-6 px-6 hidden md:hidden">
+            <div class="flex flex-col gap-4">
+                <a href="#about" class="mobile-nav-link font-mono text-xs uppercase tracking-link text-charcoal py-2 no-underline">About</a>
+                <a href="#skills" class="mobile-nav-link font-mono text-xs uppercase tracking-link text-charcoal py-2 no-underline">Skills</a>
+                <a href="#experience" class="mobile-nav-link font-mono text-xs uppercase tracking-link text-charcoal py-2 no-underline">Experience</a>
+                <a href="#projects" class="mobile-nav-link font-mono text-xs uppercase tracking-link text-charcoal py-2 no-underline">Projects</a>
+                <a href="#education" class="mobile-nav-link font-mono text-xs uppercase tracking-link text-charcoal py-2 no-underline">Education</a>
+                <a href="#contact" class="mobile-nav-link font-mono text-xs uppercase tracking-link text-charcoal py-2 no-underline">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="relative w-full overflow-hidden" style="height: 100vh;">
+        <!-- 3D Canvas Container -->
+        <div id="canvas-container" class="absolute inset-0 z-1"></div>
+        <!-- Hero Content Overlay -->
+        <div class="relative z-2 flex flex-col items-center justify-center h-full px-6 text-center">
+            <span class="hero-fade font-mono text-2xs uppercase tracking-section text-bronze mb-4 opacity-0 translate-y-5" style="transition-delay: 400ms;">
+                HELLO, I'M
+            </span>
+            <h1 class="hero-fade font-display text-4xl sm:text-5xl lg:text-7xl text-charcoal leading-none tracking-title mb-4 opacity-0 translate-y-7" style="transition-delay: 600ms;">
+                Devansh Lamaniya
+            </h1>
+            <p class="hero-fade font-body text-base sm:text-lg text-text-muted font-normal tracking-wide opacity-0 translate-y-5" style="transition-delay: 800ms;">
+                Python Developer | Software Engineer | Data Analyst
+            </p>
+            <div class="hero-fade flex flex-wrap items-center justify-center gap-4 mt-10 opacity-0 translate-y-5" style="transition-delay: 1000ms;">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <!-- Scroll Down Arrow -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-2 animate-bounce-gentle opacity-40">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#262626" stroke-width="1.5">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </section>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="scroll-reveal w-full bg-ivory py-32 px-6 lg:px-section">
+            <div class="max-w-container mx-auto">
+                <span class="block font-mono text-2xs uppercase tracking-section text-bronze mb-6">
+                    ABOUT ME
+                </span>
+                <h2 class="reveal-el font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight tracking-tight mb-8 max-w-paragraph opacity-0 -translate-x-10 transition-all duration-800">
+                    Building intelligent solutions with code and data
+                </h2>
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
+                    <div class="lg:w-about-content">
+                        <p class="reveal-el font-body text-base text-text-muted leading-relaxed mb-5 opacity-0 translate-y-5 transition-all duration-600" style="transition-delay: 200ms;">
+                            I'm Devansh Lamaniya, a passionate Python Developer and Software Engineer based in Indore, Madhya Pradesh. With a strong foundation in data analysis and machine learning, I specialize in building intelligent applications that solve real-world problems.
+                        </p>
+                        <p class="reveal-el font-body text-base text-text-muted leading-relaxed mb-5 opacity-0 translate-y-5 transition-all duration-600" style="transition-delay: 400ms;">
+                            My expertise spans backend development with Django and Flask, data visualization with Power BI, and AI-powered tools using LangChain and OpenAI. I enjoy creating systems that are not just functional, but also insightful and user-friendly.
+                        </p>
+                        <p class="reveal-el font-body text-base text-text-muted leading-relaxed mb-5 opacity-0 translate-y-5 transition-all duration-600" style="transition-delay: 600ms;">
+                            When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or analyzing datasets to uncover hidden patterns.
+                        </p>
+                    </div>
+                    <div class="reveal-el lg:w-about-image opacity-0 scale-95 transition-all duration-800" style="transition-delay: 400ms;">
+                        <div class="rounded overflow-hidden shadow-profile">
+                            <img src="assets/images/profile.png" alt="Devansh Lamaniya" class="w-full h-auto block object-cover" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" class="scroll-reveal w-full bg-dark py-32 px-6 lg:px-section">
+            <div class="max-w-container mx-auto">
+                <span class="block font-mono text-2xs uppercase tracking-section text-bronze mb-6">
+                    TECHNICAL SKILLS
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight tracking-tight mb-16">
+                    Tools & Technologies
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Programming Languages -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 0ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Programming Languages</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Python
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>SQL
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>JavaScript
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Backend Development -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 80ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Backend Development</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>FastApi
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Django
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>REST APIs
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Frontend Development -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 160ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Frontend Development</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>HTML
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>CSS
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>JavaScript
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Databases -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 240ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Databases</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>PostgreSQL
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>MySQL
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>SQLite
+                            </span>
+                            
+                        </div>
+                    </div>
+                    <!-- Data Analysis -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 320ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Data Analysis</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Pandas
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>NumPy
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Matplotlib
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Seaborn
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>MS Excel
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Power BI
+                            </span>
+                            
+                        </div>
+                    </div>
+                    <!-- AI & Machine Learning -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 400ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">AI & Machine Learning</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>LangChain
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>OpenAI
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Scikit-learn
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>NLP
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Computer Vision -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 480ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Computer Vision</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>OpenCV
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Pyteseract OCR
+                            </span>
+                            
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>TensorFlow
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Keras
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Tools & DevOps -->
+                    <div class="reveal-el group bg-skill-card border border-skill-border rounded-lg p-8 hover:border-bronze hover:bg-skill-hover transition-all duration-300 opacity-0 translate-y-10" style="transition-delay: 560ms;">
+                        <h3 class="font-display text-2xl text-ivory mb-4">Tools & DevOps</h3>
+                        <div class="flex flex-wrap gap-x-4 gap-y-2">
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Git
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>GitHub
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>Docker
+                            </span>
+                            <span class="inline-flex items-center gap-2 font-mono text-3xs uppercase tracking-wide text-text-muted">
+                                <span class="skill-tag-dot"></span>CI/CD
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section -->
+
+        <section id="experience" class="scroll-reveal w-full bg-ivory py-32 px-6 lg:px-section">
+            <!-- <div class="max-w-container mx-auto">
+                <span class="block font-mono text-2xs uppercase tracking-section text-bronze mb-6">
+                    WORK EXPERIENCE
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight tracking-tight mb-16">
+                    Professional Journey
+                </h2>
+                <div class="relative">
+                    !-- Timeline vertical line (desktop) --
+                    <div class="timeline-spine absolute left-[18px] lg:left-[40px] top-0 h-full w-px bg-bronze-light origin-top transition-transform duration-1200 scale-y-0"></div>
+                    <div class="display:flex;flex-direction:column;gap:80px;">
+                        !-- Experience item 1 --
+                        <div class="reveal-el relative z-10 pl-14 lg:pl-24 transition-all duration-500 opacity-0 translate-x-5" style="transition-delay: 300ms;">
+                            !-- Timeline node circle --
+                            <div class="timeline-circle absolute left-[13px] lg:left-[34px] top-[14px] w-3 h-3 rounded-full border-2 border-bronze bg-ivory transition-transform duration-300 scale-0" style="transition-delay: 300ms;"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-4 mb-2">
+                                <h3 class="font-display text-xl sm:text-2xl lg:text-3xl text-charcoal margin-0">
+                                    Python Developer
+                                </h3>
+                                <span class="font-body text-base text-bronze font-medium">
+                                    GammaEdge Technologies
+                                </span>
+                            </div>
+                            <span class="block font-mono text-3xs uppercase tracking-wide text-text-muted mb-3">
+                                2024 - Present
+                            </span>
+                            <p class="font-body text-sm text-text-muted leading-relaxed max-w-2xl margin-0">
+                                Developed and maintained Python-based backend systems. Built REST APIs using Django and Flask. Collaborated with cross-functional teams to deliver scalable solutions.
+                            </p>
+                        </div> 
+
+                        !-- Experience item 2 --
+                        <div class="reveal-el relative z-10 pl-14 lg:pl-24 transition-all duration-500 opacity-0 translate-x-5" style="transition-delay: 500ms;">
+                            !-- Timeline node circle --
+                            <div class="timeline-circle absolute left-[13px] lg:left-[34px] top-[14px] w-3 h-3 rounded-full border-2 border-bronze bg-ivory transition-transform duration-300 scale-0" style="transition-delay: 500ms;"></div>
+                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-4 mb-2">
+                                <h3 class="font-display text-xl sm:text-2xl lg:text-3xl text-charcoal margin-0">
+                                    Frontend Developer Intern
+                                </h3>
+                                <span class="font-body text-base text-bronze font-medium">
+                                    Pixel Pandas
+                                </span>
+                            </div>
+                            <span class="block font-mono text-3xs uppercase tracking-wide text-text-muted mb-3">
+                                2023 - 2024
+                            </span>
+                            <p class="font-body text-sm text-text-muted leading-relaxed max-w-2xl margin-0">
+                                Assisted in developing responsive web interfaces using React and modern CSS. Worked closely with senior developers to implement UI components and optimize performance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="timeline-wrapper">
+
+            <div class="timeline-spine"></div>
+
+                <!-- Experience 1 -->
+            <div class="experience-item reveal-el">
+                    <div class="timeline-circle"></div>
+
+                    <h3 class="experience-title">Python Developer</h3>
+
+                    <div class="experience-company">
+                        GammaEdge Technologies
+                    </div>
+
+                    <div class="experience-date">
+                        2026 - Present
+                    </div>
+
+                    <p class="experience-description">
+                        Developed and maintained Python-based backend systems.
+                        Built REST APIs using Django and Flask.
+                        Collaborated with cross-functional teams to deliver scalable solutions.
+                    </p>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-item reveal-el">
+                    <div class="timeline-circle"></div>
+
+                    <h3 class="experience-title">
+                        Frontend Developer Intern
+                    </h3>
+
+                    <div class="experience-company">
+                        Pixel Pandas
+                    </div>
+
+                    <div class="experience-date">
+                        2023 - 2024
+                    </div>
+
+                    <p class="experience-description">
+                        Assisted in developing responsive web interfaces using React and modern CSS.
+                        Worked closely with senior developers to implement UI components and optimize performance.
+                    </p>
+                </div>
+
+            </div>
+        </section> 
+
+
+
+
+
+
+        
+        <!-- Projects Section -->
+        <!--<section id="experience">
+            <div style="max-width:1000px;margin:auto;padding:100px 20px;">
+                <h2>Professional Journey</h2>
+
+                <div style="display:flex;flex-direction:column;gap:80px;">
+
+                    <div style="padding-left:60px;border-left:1px solid #a07d5a;">
+                        <h3>Python Developer</h3>
+                        <p>GammaEdge Technologies</p>
+                        <p>2024 - Present</p>
+                        <p>
+                            Developed and maintained Python-based backend systems.
+                        </p>
+                    </div>
+
+                    <div style="padding-left:60px;border-left:1px solid #a07d5a;">
+                        <h3>Frontend Developer Intern</h3>
+                        <p>Pixel Pandas</p>
+                        <p>2023 - 2024</p>
+                        <p>
+                            Assisted in developing responsive web interfaces.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+        <section id="projects" class="scroll-reveal w-full bg-ivory py-32 px-6 lg:px-section">
+            <div class="max-w-container mx-auto">
+                <span class="block font-mono text-2xs uppercase tracking-section text-bronze mb-6">
+                    FEATURED PROJECTS
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight tracking-tight mb-16">
+                    Selected Work
+                </h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- Project 1: RepoMind AI -->
+                    <div class="reveal-el group bg-white rounded-lg overflow-hidden shadow-card hover:shadow-card-hover hover:translate-y-neg1 transition-all duration-300 opacity-0 translate-y-16" style="transition-delay: 0ms;">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/images/1.jpg" alt="RepoMind AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl sm:text-2xl text-charcoal mb-2 margin-0">RepoMind AI</h3>
+                            <p class="font-body text-sm text-text-muted mb-3 leading-normal">
+                                AI-powered GitHub repository analyzer using LangChain and OpenAI
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Python</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">LangChain</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">OpenAI</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">GitHub API</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">GitHub</a>
+                                <!-- <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2: InterviewMate -->
+                    <div class="reveal-el group bg-white rounded-lg overflow-hidden shadow-card hover:shadow-card-hover hover:translate-y-neg1 transition-all duration-300 opacity-0 translate-y-16" style="transition-delay: 100ms;">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/images/interviewmate.png" alt="InterviewMate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl sm:text-2xl text-charcoal mb-2 margin-0">InterviewMate</h3>
+                            <p class="font-body text-sm text-text-muted mb-3 leading-normal">
+                                AI interview preparation platform with real-time feedback
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Python</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">NLP</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">React</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Machine Learning</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">GitHub</a>
+                                <!-- <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3: GitHub Release Monitor -->
+                    <div class="reveal-el group bg-white rounded-lg overflow-hidden shadow-card hover:shadow-card-hover hover:translate-y-neg1 transition-all duration-300 opacity-0 translate-y-16" style="transition-delay: 200ms;">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/images/github_monitor.png" alt="GitHub Release Monitor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl sm:text-2xl text-charcoal mb-2 margin-0">GitHub Release Monitor</h3>
+                            <p class="font-body text-sm text-text-muted mb-3 leading-normal">
+                                Automated tool to track and notify GitHub repository releases
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Python</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">GitHub API</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Automation</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">GitHub</a>
+                                <!--<a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">Live Demo</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4: ANPR System -->
+                    <div class="reveal-el group bg-white rounded-lg overflow-hidden shadow-card hover:shadow-card-hover hover:translate-y-neg1 transition-all duration-300 opacity-0 translate-y-16" style="transition-delay: 400ms;">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/images/anpr.png" alt="ANPR System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl sm:text-2xl text-charcoal mb-2 margin-0">ANPR System</h3>
+                            <p class="font-body text-sm text-text-muted mb-3 leading-normal">
+                                Automatic Number Plate Recognition using OpenCV and EasyOCR
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Python</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">OpenCV</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">EasyOCR</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Computer Vision</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">GitHub</a>
+                                <!-- <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5: Sales Dashboard -->
+                    <div class="reveal-el group bg-white rounded-lg overflow-hidden shadow-card hover:shadow-card-hover hover:translate-y-neg1 transition-all duration-300 opacity-0 translate-y-16" style="transition-delay: 500ms;">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/images/sales.png" alt="Sales Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl sm:text-2xl text-charcoal mb-2 margin-0">Sales Dashboard</h3>
+                            <p class="font-body text-sm text-text-muted mb-3 leading-normal">
+                                Interactive sales analytics dashboard with Power BI integration
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Python</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Power BI</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Data Analysis</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Pandas</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">GitHub</a>
+                                <!-- <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">Live Demo</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6: Customer Churn Analysis -->
+                    <div class="reveal-el group bg-white rounded-lg overflow-hidden shadow-card hover:shadow-card-hover hover:translate-y-neg1 transition-all duration-300 opacity-0 translate-y-16" style="transition-delay: 600ms;">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="assets/images/customer_analysis.png" alt="Customer Churn Analysis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-display text-xl sm:text-2xl text-charcoal mb-2 margin-0">Customer Churn Analysis</h3>
+                            <p class="font-body text-sm text-text-muted mb-3 leading-normal">
+                                Machine learning model to predict and analyze customer churn
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Python</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Scikit-learn</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Pandas</span>
+                                <span class="font-mono text-4xs uppercase bg-bronze-light text-bronze px-3 py-1 rounded">Matplotlib</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">GitHub</a>
+                                <!-- <a href="#" class="font-mono text-3xs uppercase tracking-wide text-charcoal hover:text-bronze transition-colors duration-200 no-underline">Live Demo</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Education Section -->
+        <section id="education" class="scroll-reveal w-full bg-dark py-32 px-6 lg:px-section">
+            <div class="max-w-container mx-auto">
+                <div class="text-center mb-20">
+                    <span class="block font-mono text-2xs uppercase tracking-section text-bronze mb-6">
+                        EDUCATION
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-ivory leading-tight tracking-tight">
+                        Learning Path
+                    </h2>
+                </div>
+                <div id="timeline-container" class="timeline relative grid grid-cols-1 lg:grid-cols-6 gap-y-32 lg:gap-x-16 pt-32">
+                    <!-- Timeline spine line - desktop only -->
+                    <div class="hidden lg:block absolute left-0 w-full h-px bg-bronze-light top-1/2 -translate-y-1/2"></div>
+                    
+                    <!-- Education item 1 (Odd) -->
+                    <div class="timeline__item lg:col-span-3 lg:col-start-1">
+                        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+                            <!-- Image -->
+                            <div class="timeline__image-wrap w-full lg:w-1/2 aspect-school rounded-lg overflow-hidden flex-shrink-0">
+                                <div class="timeline__image w-full h-full bg-cover bg-center" style="background-image: url('assets/images/school.png');"></div>
+                            </div>
+                            <!-- Caption -->
+                            <div class="timeline__caption flex flex-col justify-center flex-1 py-4">
+                                <span class="timeline__text--offset font-mono text-3xs uppercase tracking-wide text-bronze mb-2 block">
+                                    2019 - 2020
+                                </span>
+                                <h3 class="timeline__text font-display text-2xl lg:text-3xl text-ivory leading-tight mb-2 margin-0">
+                                    New era Public School
+                                </h3>
+                                <p class="timeline__text font-body text-sm text-text-muted leading-relaxed margin-0">
+                                    Higher Secondary Education
+                                </p>
+                                <div class="timeline__line w-12 h-px bg-bronze mt-4 origin-left"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education item 2 (Even) -->
+                    <div class="timeline__item lg:col-span-3 lg:col-start-4">
+                        <div class="flex flex-col lg:flex-row-reverse gap-6 lg:gap-8 items-start">
+                            <!-- Image -->
+                            <div class="timeline__image-wrap w-full lg:w-1/2 aspect-school rounded-lg overflow-hidden flex-shrink-0">
+                                <div class="timeline__image w-full h-full bg-cover bg-center" style="background-image: url('assets/images/highschool.jpg');"></div>
+                            </div>
+                            <!-- Caption -->
+                            <div class="timeline__caption flex flex-col justify-center flex-1 py-4">
+                                <span class="timeline__text--offset font-mono text-3xs uppercase tracking-wide text-bronze mb-2 block">
+                                    2021 - 2022
+                                </span>
+                                <h3 class="timeline__text font-display text-2xl lg:text-3xl text-ivory leading-tight mb-2 margin-0">
+                                    New era Public School
+                                </h3>
+                                <p class="timeline__text font-body text-sm text-text-muted leading-relaxed margin-0">
+                                    Senior Secondary Education
+                                </p>
+                                <div class="timeline__line w-12 h-px bg-bronze mt-4 origin-left"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education item 3 (Odd) -->
+                    <div class="timeline__item lg:col-span-3 lg:col-start-1">
+                        <div class="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+                            <!-- Image -->
+                            <div class="timeline__image-wrap w-full lg:w-1/2 aspect-school rounded-lg overflow-hidden flex-shrink-0">
+                                <div class="timeline__image w-full h-full bg-cover bg-center" style="background-image: url('assets/images/college.jpg');"></div>
+                            </div>
+                            <!-- Caption -->
+                            <div class="timeline__caption flex flex-col justify-center flex-1 py-4">
+                                <span class="timeline__text--offset font-mono text-3xs uppercase tracking-wide text-bronze mb-2 block">
+                                    2022 - 2026
+                                </span>
+                                <h3 class="timeline__text font-display text-2xl lg:text-3xl text-ivory leading-tight mb-2 margin-0">
+                                    Institute of Engineering and Science IPS Academy
+                                </h3>
+                                <p class="timeline__text font-body text-sm text-text-muted leading-relaxed margin-0">
+                                    B.Tech in Computer Science & Engineering with specialization in AIML
+                                </p>
+                                <div class="timeline__line w-12 h-px bg-bronze mt-4 origin-left"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="scroll-reveal w-full bg-ivory py-32 lg:pb-40 px-6 lg:px-section">
+            <div class="max-w-container mx-auto">
+                <span class="block font-mono text-2xs uppercase tracking-section text-bronze mb-6">
+                    GET IN TOUCH
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight tracking-tight mb-12">
+                    Let's Build Something Together
+                </h2>
+                <!-- <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">-->
+                <div class="contact-layout">
+                    <!-- Contact Details -->
+                    <div class="reveal-el lg:w-1/2 transition-all duration-700 opacity-0 -translate-x-7" style="transition-delay: 0ms;">
+                        <div class="space-y-4 mb-8">
+                            <a href="mailto:devanshlamaniya@gmail.com" class="block font-body text-lg text-charcoal hover:text-bronze transition-colors duration-200 no-underline">
+                                devanshlamaniya1@gmail.com
+                            </a>
+                            <p class="font-body text-base text-text-muted margin-0">
+                                +91 62610 09496
+                            </p>
+                            <p class="font-body text-base text-text-muted margin-0">
+                                Indore, Madhya Pradesh, India
+                            </p>
+                        </div>
+                        <div class="flex gap-6 mt-8">
+                            <a href="https://www.linkedin.com/in/devansh-lamaniya-bb0160253/" target="_blank" rel="noopener noreferrer" class="social-link group relative font-mono text-3xs uppercase tracking-wide text-charcoal no-underline">
+                                LinkedIn
+                                <span class="social-link-line"></span>
+                            </a>
+                            <a href="https://github.com/DevanshLamaniya1" target="_blank" rel="noopener noreferrer" class="social-link group relative font-mono text-3xs uppercase tracking-wide text-charcoal no-underline">
+                                GitHub
+                                <span class="social-link-line"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="reveal-el lg:w-1/2 transition-all duration-700 opacity-0 translate-x-7" style="transition-delay: 200ms;">
+                        <form
+                            id="contact-form"
+                            action="https://formspree.io/f/xbdevzga "
+                            method="POST"
+                            class="space-y-6"
+                        >
+                            <div>
+                                <label for="name" class="sr-only">Name</label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    placeholder="Your Name"
+                                    class="form-input w-full bg-transparent border-b border-charcoal-light py-4 font-body text-base text-charcoal placeholder-muted focus:border-bronze focus:outline-none transition-colors duration-200"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="email" class="sr-only">Email</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Your Email"
+                                    class="form-input w-full bg-transparent border-b border-charcoal-light py-4 font-body text-base text-charcoal placeholder-muted focus:border-bronze focus:outline-none transition-colors duration-200"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Your Message"
+                                    rows="4"
+                                    class="form-input w-full bg-transparent border-b border-charcoal-light py-4 font-body text-base text-charcoal placeholder-muted focus:border-bronze focus:outline-none transition-colors duration-200 resize-y min-h-textarea"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mt-2">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="scroll-reveal w-full bg-dark py-20 lg:pt-20 lg:pb-10 px-6 lg:px-section">
+        <div class="max-w-container mx-auto">
+            <!-- Paint Wordmark -->
+            <div id="footer-paint-area" class="relative w-full h-32 lg:h-48 mb-12 flex items-center justify-center transition-opacity duration-1000 opacity-0">
+                <!-- Paint worklet canvas target -->
+                <div id="paint-target" class="absolute inset-0"></div>
+                <h2 class="relative z-10 font-display text-5xl lg:text-8xl text-ivory tracking-tight margin-0" aria-label="DEVANSH">
+                    DEVANSH
+                </h2>
+            </div>
+            <div class="flex flex-col items-center gap-6 text-center">
+                <a href="mailto:devanshlamaniya@gmail.com" class="font-mono text-sm text-text-muted hover:text-ivory transition-colors duration-200 no-underline">
+                    devanshlamaniya1@gmail.com
+                </a>
+                <div class="flex gap-8">
+                    <a href="https://www.linkedin.com/in/devansh-lamaniya-bb0160253/" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-logo text-text-muted hover:text-bronze transition-colors duration-200 no-underline">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/DevanshLamaniya1" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-logo text-text-muted hover:text-bronze transition-colors duration-200 no-underline">
+                        GitHub
+                    </a>
+                </div>
+                <p class="font-body text-xs text-footer-copy mt-8">
+                    &copy; 2026 Devansh Lamaniya. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Libraries (Three.js and GSAP + ScrollTrigger) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom Client-side Script -->
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
